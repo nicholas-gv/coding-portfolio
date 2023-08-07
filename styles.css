@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Titillium+Web:wght@300&display=swap');
+
+:root {
+    --container-height: 450px;
+    --image-width: 250px;
+    --border-radius-standard: 12px;
+    --card-transition-time: 0.2s;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+canvas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    inset: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 70px;
+    font-size: 48px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
+    letter-spacing: 0.05rem;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.image-with-hover {
+    width: var(--image-width);
+    height: var(--container-height);
+    object-fit: cover;
+    border-radius: var(--border-radius-standard);
+    transition: opacity var(--card-transition-time) ease-in-out;
+}
+
+#link-icon-title {
+    margin-left: 15px
+}
+
+#coding-portfolio-title {
+    color: rgba(255, 149, 0)
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 149, 0, 0.9); /* Adjust the color and opacity of the overlay */
+    opacity: 0; 
+    border-radius: var(--border-radius-standard);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity var(--card-transition-time) ease-in-out;
+  }
+
+.container {
+    margin: 0 auto;
+    max-width: fit-content;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 70px;
+    padding: 15px 10px;
+    background-color: rgb(255, 255, 255, 0.68);
+    border-radius: var(--border-radius-standard);
+}
+
+.container > .image-container {
+    margin: 0px 8px;
+}
+
+.project-title {
+    font-size: 28px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
+    text-align: center;
+    opacity: 0; 
+    transition: opacity var(--card-transition-time) ease-in-out;
+}
+
+.image-container:hover img {
+    opacity: 0; /* Hide the image on hover */
+  }
+  
+.image-container:hover .overlay {
+    opacity: 1; /* Show the overlay on hover */
+}
+
+.image-container:hover .project-title {
+    opacity: 1; /* Show the text on hover */
+}
