@@ -1,29 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Titillium+Web:wght@300&display=swap');
 
 :root {
-    --container-height: 450px;
-    --image-width: 250px;
-    --border-radius-standard: 12px;
+    --card-height: 520px;
+    --card-width: 260px;
+    --border-radius-standard: 10px;
     --card-transition-time: 0.2s;
+}
+
+html {
+    min-height: 100%;
 }
 
 body {
     width: 100%;
+    min-height: 100%;
     margin: 0;
-    overflow: hidden;
+    overflow: auto;
 }
 
 canvas {
     position: absolute;
     width: 100%;
+    min-height: 760px;
     height: 100%;
     z-index: -1;
-    inset: 0;
+    top: 0;
+    overflow: auto;
 }
 
 h1 {
     text-align: center;
-    margin-top: 70px;
+    padding: 40px;
     font-size: 48px;
     color: #fff;
     font-family: 'Roboto', sans-serif;
@@ -36,18 +43,112 @@ a {
     text-decoration: none;
 }
 
-.image-container {
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
+b {
+    font-weight: 600;
 }
 
-.image-with-hover {
-    width: var(--image-width);
-    height: var(--container-height);
-    object-fit: cover;
+li {
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
+    list-style-type: disc;
+    font-size: 15px;
+    margin-left: 45px;
+    padding-right: 15px;
+    line-height: 1.4;
+}
+
+ul > li:first-child {
+    margin-top: 4px;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: fit-content;
+    min-height: var(--card-height);
+    display: grid;
+    align-content: center;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: var(--card-height);
+    flex-wrap: wrap;
+    margin-top: 70px;
+    padding: 15px 10px;
+    background-color: rgb(255, 255, 255, 0.4);
     border-radius: var(--border-radius-standard);
-    transition: opacity var(--card-transition-time) ease-in-out;
+}
+
+.tag-container {
+    margin: 15px 13px 0px 13px;
+}
+
+.tag {
+    background-color: #000;
+    font-size: 14px;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.container > .card {
+    margin: 0px 10px;
+}
+
+.card {
+    position: relative;
+    height: var(--container-height);
+    width: var(--image-width);
+    border-radius: var(--border-radius-standard);
+}
+
+.card-image {
+    border-radius: var(--border-radius-standard) var(--border-radius-standard) 0 0;
+}
+
+.card-description-container {
+    position: absolute;
+    top: 165px;
+    left: 0;
+    background-color: #fff;
+    width: var(--card-width);
+    height: calc(var(--card-height) - 165px);
+    border-radius: 0px 0px var(--border-radius-standard) var(--border-radius-standard);
+    line-height: 1.35;
+}
+
+.card-title {
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 20px 0px 0px 15px;
+}
+
+.card-description {
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.3 px;
+    padding: 20px 15px 0px 15px;
+}
+
+.card-link-container {
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.card-link {
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.03rem;
+    background-color: #ff6a00;
+    color: #fff;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-right: 5px;
 }
 
 #link-icon-title {
@@ -58,55 +159,3 @@ a {
     color: rgba(255, 149, 0)
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 149, 0, 0.9); /* Adjust the color and opacity of the overlay */
-    opacity: 0; 
-    border-radius: var(--border-radius-standard);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity var(--card-transition-time) ease-in-out;
-  }
-
-.container {
-    margin: 0 auto;
-    max-width: fit-content;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 70px;
-    padding: 15px 10px;
-    background-color: rgb(255, 255, 255, 0.68);
-    border-radius: var(--border-radius-standard);
-}
-
-.container > .image-container {
-    margin: 0px 8px;
-}
-
-.project-title {
-    font-size: 28px;
-    color: #fff;
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Titillium Web', sans-serif;
-    text-align: center;
-    opacity: 0; 
-    transition: opacity var(--card-transition-time) ease-in-out;
-}
-
-.image-container:hover img {
-    opacity: 0; /* Hide the image on hover */
-  }
-  
-.image-container:hover .overlay {
-    opacity: 1; /* Show the overlay on hover */
-}
-
-.image-container:hover .project-title {
-    opacity: 1; /* Show the text on hover */
-}
