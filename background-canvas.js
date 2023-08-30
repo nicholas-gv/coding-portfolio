@@ -15,12 +15,12 @@ var G = function(x, y, t) {
 }
 
 var t = 0;
-var x, y;
+var x1, y1;
 
 var run = function() {
-  for(x=0;x<=35;x++) {
-    for(y=0;y<=35;y++) {
-      col(x, y, G(x,y,t));
+  for(x1=0;x1<=35;x1++) {
+    for(y1=0;y1<=35;y1++) {
+      col(x1, y1, G(x1,y1,t));
     }
   }
   t = t + 0.03;

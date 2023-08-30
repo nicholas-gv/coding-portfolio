@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Titillium+Web:wght@300&display=swap');
 
 :root {
-    --card-height: 520px;
-    --card-width: 260px;
+    --card-height: 280px;
+    --card-width: 500px;
     --border-radius-standard: 10px;
     --card-transition-time: 0.2s;
+    --card-gap: 50px;
 }
 
 html {
@@ -62,18 +63,19 @@ ul > li:first-child {
 }
 
 .container {
+    position: relative;
     margin: 0 auto;
     max-width: fit-content;
     min-height: var(--card-height);
     display: grid;
     align-content: center;
-    grid-template-columns: auto auto auto auto;
-    grid-template-rows: var(--card-height);
+    grid-template-columns: var(--card-width) var(--card-width);
+    grid-template-rows: var(--card-height) var(--card-height);
     flex-wrap: wrap;
-    margin-top: 70px;
     padding: 15px 10px;
-    background-color: rgb(255, 255, 255, 0.4);
-    border-radius: var(--border-radius-standard);
+    gap: var(--card-gap);
+    /* background-color: rgb(255, 255, 255, 0.4); */
+    /* border-radius: var(--border-radius-standard); */
 }
 
 .tag-container {
@@ -98,21 +100,45 @@ ul > li:first-child {
     position: relative;
     height: var(--container-height);
     width: var(--image-width);
-    border-radius: var(--border-radius-standard);
+    /* border-radius: var(--border-radius-standard); */
+}
+
+.frame {
+    width: var(--card-width);
+    height: var(--card-height);
+    transition: transform 200ms;
+}
+
+.frame:hover {
+    transform: scale3d(1.05, 1.05, 1.05);
+}
+  
+.card {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    transition-duration: 250ms;
+    transition-property: transform, box-shadow;
+    transition-timing-function: ease-out;
 }
 
 .card-image {
-    border-radius: var(--border-radius-standard) var(--border-radius-standard) 0 0;
+    object-fit: contain;
+    height: var(--container-height);
+    width: var(--card-width);
+    /* border-radius: var(--border-radius-standard); */
 }
 
-.card-description-container {
+.card-content {
     position: absolute;
-    top: 165px;
+    top: 0;
     left: 0;
     background-color: #fff;
     width: var(--card-width);
-    height: calc(var(--card-height) - 165px);
-    border-radius: 0px 0px var(--border-radius-standard) var(--border-radius-standard);
+    height: var(--card-height);
+    /* border-radius: var(--border-radius-standard); */
     line-height: 1.35;
 }
 
