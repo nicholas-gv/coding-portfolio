@@ -246,7 +246,7 @@ b {
     display: flex;
     flex-wrap: wrap;
     z-index: 10;
-    margin: 5px 0px 10px 0px;
+    margin-bottom: 15px;
 }
 
 .tag {
@@ -256,6 +256,7 @@ b {
     padding: 4px 10px;
     border-radius: 25px;
     margin-right: 5px;
+    margin-top: 5px;
     font-size: 16px;
     color: #fff;
     z-index: 10;
@@ -294,6 +295,6 @@ b {
 .blue {background-color: #3178c6;}
 .blue-react {background-color: #60dafa; color: black}
 .blue-tailwind {background-color: #38bdf8; color: black}
-.redux-purple {background-color: #fff; color: #774abb;}
+.redux-purple {color: #fff; background-color: #774abb;}
 .axios-purple {background-color: #fff; color: #671ddf;}
 .pastel-purple {background-color: #cf649a;}
