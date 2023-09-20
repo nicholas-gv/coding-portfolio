@@ -294,5 +294,6 @@ b {
 .blue {background-color: #3178c6;}
 .blue-react {background-color: #60dafa; color: black}
 .blue-tailwind {background-color: #38bdf8; color: black}
-.purple {background-color: #774abb;}
+.redux-purple {background-color: #fff; color: #774abb;}
+.axios-purple {background-color: #774abb;}
 .pastel-purple {background-color: #cf649a;}
