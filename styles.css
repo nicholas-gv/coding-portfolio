@@ -246,7 +246,7 @@ b {
     display: flex;
     flex-wrap: wrap;
     z-index: 10;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .tag {
@@ -257,7 +257,7 @@ b {
     border-radius: 25px;
     margin-right: 5px;
     margin-top: 5px;
-    font-size: 16px;
+    font-size: 15px;
     color: #fff;
     z-index: 10;
 }
