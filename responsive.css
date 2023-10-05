@@ -38,8 +38,8 @@
         padding: 10px 0px 25px 12px;
     }
 
-    .card-border:nth-child(1) .card{ background-image: url(images/Quiz-Mobile-thumbnail.png); }
+    .card-border:nth-child(1) .card{ background-image: url(images/Fake-Landing-Page-Mobile-thumbnail.png); }
     .card-border:nth-child(2) .card{ background-image: url(images/Blog-Mobile-thumbnail.png);}
-    .card-border:nth-child(3) .card{ background-image: url(images/Common-Layouts-Mobile-thumbnail.png);}
-    .card-border:nth-child(4) .card{ background-image: url(images/Fake-Landing-Page-Mobile-thumbnail.png);}
+    .card-border:nth-child(3) .card{ background-image: url(images/Quiz-Mobile-thumbnail.png);}
+    .card-border:nth-child(4) .card{ background-image: url(images/Common-Layouts-Mobile-thumbnail.png);}
 }
