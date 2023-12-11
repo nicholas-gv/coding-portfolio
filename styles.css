@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Titillium+Web:wght@300&display=swap');
 
 :root {
-    --card-height: 260px;
-    --card-width: 500px;
+    --card-height: 268px;
+    --card-width: 400px;
     --border-radius-standard: 10px;
     --card-transition-time: 0.2s;
     --card-gap: 50px;
@@ -33,7 +33,7 @@ canvas {
 
 h1 {
     text-align: center;
-    padding: 30px 0px 70px 0px;
+    padding: 50px 0px 120px 0px;
     font-size: 48px;
     color: #fff;
     font-family: 'Roboto', sans-serif;
@@ -54,8 +54,8 @@ b {
     max-width: fit-content;
     min-height: var(--card-height);
     display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
+    grid-template-columns: auto auto auto;
+    /* grid-template-rows: auto auto; */
     gap: var(--card-gap);
 }
 
@@ -94,7 +94,7 @@ b {
     transform: scaleX(0);
 }
 
-.card-border:nth-child(1) .card{ background-image: url(images/dashboard-main-v2.png); background-size: contain;}
+.card-border:nth-child(1) .card{ background-image: url(images/dashboard-main.png); background-size: contain;}
 .card-border:nth-child(2) .card{ background-image: url(images/Fake-Landing-Page-thumbnail.png); background-size: contain;}
 .card-border:nth-child(3) .card{ background-image: url(images/Blog-thumbnail.png); background-size: contain;}
 /* .card-border:nth-child(3) .card{ background-image: url(images/Quiz-thumbnail.png); background-size: contain;} */
@@ -160,21 +160,21 @@ b {
     pointer-events: none;
     background-image: linear-gradient(
       to bottom,
-      hsla(0, 0%, 0%, 0.150) 0%,
-      hsla(0, 0%, 0%, 0.289) 11.7%,
-      hsla(0, 0%, 0%, 0.384) 22.1%,
-      hsla(0, 0%, 0%, 0.442) 31.2%,
-      hsla(0, 0%, 0%, 0.503) 39.4%,
-      hsla(0, 0%, 0%, 0.542) 46.6%,
-      hsla(0, 0%, 0%, 0.629) 53.1%,
-      hsla(0, 0%, 0%, 0.640) 58.9%,
-      hsla(0, 0%, 0%, 0.684) 64.3%,
-      hsla(0, 0%, 0%, 0.748) 69.3%,
-      hsla(0, 0%, 0%, 0.790) 74.1%,
-      hsla(0, 0%, 0%, 0.807) 78.8%,
-      hsla(0, 0%, 0%, 0.818) 83.6%,
-      hsla(0, 0%, 0%, 0.821) 88.7%,
-      hsla(0, 0%, 0%, 0.902) 94.1%,
+      hsla(0, 0%, 0%, 0.250) 0%,
+      hsla(0, 0%, 0%, 0.329) 11.7%,
+      hsla(0, 0%, 0%, 0.424) 22.1%,
+      hsla(0, 0%, 0%, 0.482) 31.2%,
+      hsla(0, 0%, 0%, 0.543) 39.4%,
+      hsla(0, 0%, 0%, 0.582) 46.6%,
+      hsla(0, 0%, 0%, 0.669) 53.1%,
+      hsla(0, 0%, 0%, 0.680) 58.9%,
+      hsla(0, 0%, 0%, 0.724) 64.3%,
+      hsla(0, 0%, 0%, 0.788) 69.3%,
+      hsla(0, 0%, 0%, 0.820) 74.1%,
+      hsla(0, 0%, 0%, 0.847) 78.8%,
+      hsla(0, 0%, 0%, 0.878) 83.6%,
+      hsla(0, 0%, 0%, 0.911) 88.7%,
+      hsla(0, 0%, 0%, 0.932) 94.1%,
       hsla(0, 0%, 0%, 0.959) 100%
     );
     transform: translateY(-49.8%);
@@ -187,8 +187,8 @@ b {
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: #ffa500;
-    background-color: #FFB726;
+    /* background-color: #ffa500;
+    background-color: #FFB726; */
     background-color: #ffac07;
     transition: background-color 0.3s;
     padding: 5px 0px 10px 12px;
@@ -251,16 +251,23 @@ b {
 }
 
 .tag {
+    display: flex;
     font-family: 'Roboto', sans-serif;
     font-weight: 800;
     background-color: #000;
-    padding: 4px 10px;
+    padding: 5px 10px;
     border-radius: 25px;
     margin-right: 5px;
     margin-top: 5px;
     font-size: 15px;
+    align-items: center;
     color: #fff;
     z-index: 10;
+}
+
+.tag-text {
+    font-size: 13px;
+    margin-left: 4px;
 }
 
 .card-description {
@@ -278,20 +285,29 @@ b {
 }
 
 .card-link {
+    display: flex;
+    align-items: first baseline;
     font-family: 'Roboto', sans-serif;
     font-family: 'Titillium Web', sans-serif;
     font-size: 18px;
     font-weight: 800;
     letter-spacing: 0.3px;
-    background-color: #ff6a00;
-    color: #fff;
+    /* background-color: #ff6a00; */
+    background-color: #ffac07;
+    /* color: #fff; */
+    color: #000;
     border-radius: 20px;
-    padding: 5px 10px;
+    padding: 5px 12px;
     margin-right: 5px;
 }
 
+.card-link > img {
+    margin-left: 4px;
+}
+
 .red {background-color: #e44d25;}
-.white {background-color: #fff; color: black;}
+.white {background-color: #fff; color: #000;}
+.black {background-color: #000; color: #fff;}
 .yellow { background-color: #feca3c; color: black}
 .blue {background-color: #3178c6;}
 .blue-react {background-color: #60dafa; color: black}
@@ -299,3 +315,5 @@ b {
 .redux-purple {color: #fff; background-color: #774abb;}
 .axios-purple {background-color: #fff; color: #671ddf;}
 .pastel-purple {background-color: #cf649a;}
+.solid-blue {background-color: #4E85C2;}
+.chartjs-orange {background-color: #FE777B;}
