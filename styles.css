@@ -93,11 +93,12 @@ b {
 .card-border:after {
     transform: scaleX(0);
 }
-  
-.card-border:nth-child(1) .card{ background-image: url(images/Fake-Landing-Page-thumbnail.png); background-size: contain;}
-.card-border:nth-child(2) .card{ background-image: url(images/Blog-thumbnail.png); background-size: contain;}
-.card-border:nth-child(3) .card{ background-image: url(images/Quiz-thumbnail.png); background-size: contain;}
-.card-border:nth-child(4) .card{ background-image: url(images/Common-Layouts-thumbnail.png); background-size: contain;}
+
+.card-border:nth-child(1) .card{ background-image: url(images/dashboard-main-v2.png); background-size: contain;}
+.card-border:nth-child(2) .card{ background-image: url(images/Fake-Landing-Page-thumbnail.png); background-size: contain;}
+.card-border:nth-child(3) .card{ background-image: url(images/Blog-thumbnail.png); background-size: contain;}
+/* .card-border:nth-child(3) .card{ background-image: url(images/Quiz-thumbnail.png); background-size: contain;} */
+/* .card-border:nth-child(4) .card{ background-image: url(images/Common-Layouts-thumbnail.png); background-size: contain;} */
 
 .card-border:nth-child(1):before, .card-border:nth-child(2):before, 
 .card-border:nth-child(3):before, .card-border:nth-child(4):before { 
