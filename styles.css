@@ -8,6 +8,7 @@
     --card-gap: 50px;
     --d: 700ms;
     --e: cubic-bezier(0.19, 1, 0.22, 1);
+    --header-height: 65px;
 }
 
 html {
@@ -134,19 +135,19 @@ b {
 }
 
 .card-content {
-    transform: translateY(calc(100% - 60px));
+    transform: translateY(calc(100% - var(--header-height)));
 }
 
 .card-border:nth-child(2) .card-content {
-    transform: translateY(calc(100% - 60px));
+    transform: translateY(calc(100% - var(--header-height)));
 }
 
 .card-border:nth-child(3) .card-content {
-    transform: translateY(calc(100% - 60px));
+    transform: translateY(calc(100% - var(--header-height)));
 }
 
 .card-border:nth-child(4) .card-content {
-    transform: translateY(calc(100% - 60px));
+    transform: translateY(calc(100% - var(--header-height)));
 }
 
 .card-content:after{
@@ -182,6 +183,39 @@ b {
     opacity: 0;
 }
 
+.card-content:after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    pointer-events: none;
+    background-image: linear-gradient(
+      to bottom,
+      hsla(0, 0%, 0%, 0.290) 0%,
+      hsla(0, 0%, 0%, 0.369) 11.7%,
+      hsla(0, 0%, 0%, 0.464) 22.1%,
+      hsla(0, 0%, 0%, 0.522) 31.2%,
+      hsla(0, 0%, 0%, 0.583) 39.4%,
+      hsla(0, 0%, 0%, 0.622) 46.6%,
+      hsla(0, 0%, 0%, 0.709) 53.1%,
+      hsla(0, 0%, 0%, 0.720) 58.9%,
+      hsla(0, 0%, 0%, 0.764) 64.3%,
+      hsla(0, 0%, 0%, 0.808) 69.3%,
+      hsla(0, 0%, 0%, 0.860) 74.1%,
+      hsla(0, 0%, 0%, 0.887) 78.8%,
+      hsla(0, 0%, 0%, 0.878) 83.6%,
+      hsla(0, 0%, 0%, 0.911) 88.7%,
+      hsla(0, 0%, 0%, 0.932) 94.1%,
+      hsla(0, 0%, 0%, 0.959) 100%
+    );
+    transform: translateY(-49.8%);
+    transition: transform calc(var(--d) * 2) var(--e);
+    opacity: 0;
+}
+
 .header-container {
     z-index: 10;
     display: flex;
@@ -191,7 +225,8 @@ b {
     background-color: #FFB726; */
     background-color: #ffac07;
     transition: background-color 0.3s;
-    padding: 5px 0px 10px 12px;
+    padding: 10px 0px 10px 12px;
+    
 }
 
 .logo {
