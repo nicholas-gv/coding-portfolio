@@ -4,9 +4,8 @@
     --card-height: 268px;
     --card-width: 400px;
     --border-radius-standard: 10px;
-    --card-transition-time: 0.2s;
     --card-gap: 50px;
-    --d: 700ms;
+    --d: 450ms;
     --e: cubic-bezier(0.19, 1, 0.22, 1);
     --header-height: 65px;
 }
@@ -25,7 +24,7 @@ body {
 canvas {
     position: absolute;
     width: 100%;
-    min-height: 760px;
+    min-height: 740px;
     height: 100%;
     z-index: -1;
     top: 0;
